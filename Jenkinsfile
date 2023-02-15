@@ -3,23 +3,29 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo "Building..."'
-                sh 'ls -l'
+                // Make the script executable
+                sh 'chmod +x build.sh'
+                
+                // Execute the script
+                sh './build.sh'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo "Testing..."'
-                sh 'pwd'
-                sh 'touch testfile.txt'
-                sh 'ls -l'
+                // Make the script executable
+                sh 'chmod +x test.sh'
+                
+                // Execute the script
+                sh './test.sh'
             }
         }
         stage('Deploy') {
             steps {
-                sh 'echo "Deploying..."'
-                sh 'mv testfile.txt /tmp'
-                sh 'ls -l /tmp'
+                // Make the script executable
+                sh 'chmod +x deploy.sh'
+                
+                // Execute the script
+                sh './deploy.sh'
             }
         }
     }
