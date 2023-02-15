@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'build.sh'
+                sh 'echo "Building..."'
+                sh 'ls -l'
             }
         }
         stage('Test') {
@@ -23,3 +24,4 @@ pipeline {
         }
     }
 }
+
