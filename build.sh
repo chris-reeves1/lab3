@@ -1,2 +1,5 @@
-sh 'echo "Building..."'
-sh 'ls -l'
+#!/bin/bash
+
+echo "Building..."
+ls -l
+
