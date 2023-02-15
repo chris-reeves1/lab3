@@ -1,1 +1,2 @@
-ls -al
+echo "Building..."
+ls -l
