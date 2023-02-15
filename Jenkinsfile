@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bash 'build.sh'
+                sh 'build.sh'
             }
         }
         stage('Test') {
