@@ -7,7 +7,7 @@ pipeline {
                 sh 'chmod +x build.sh'
                 
                 // Execute the script
-                sh './build.sh'
+                sh 'sh build.sh'
             }
         }
         stage('Test') {
